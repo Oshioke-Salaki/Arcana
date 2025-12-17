@@ -19,8 +19,7 @@ export function StarknetProvider({ children }: { children: React.ReactNode }) {
 
   const rpc = useCallback((chain: Chain) => {
     return {
-      nodeUrl:
-        "https://starknet-mainnet.g.alchemy.com/starknet/version/rpc/v0_8/L-VhhXxIK2EZXjZfcTn-q5tY4u_GHkoc",
+      nodeUrl: process.env.NEXT_PUBLIC_RPC_URL,
     };
   }, []);
 

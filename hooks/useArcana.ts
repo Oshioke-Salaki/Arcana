@@ -37,8 +37,7 @@ export const useArcana = () => {
   // Dedicated Tongo Provider (Mainnet RPC)
   const tongoProvider = useMemo(() => {
     return new RpcProvider({
-      nodeUrl:
-        "https://starknet-mainnet.g.alchemy.com/starknet/version/rpc/v0_7/L-VhhXxIK2EZXjZfcTn-q5tY4u_GHkoc",
+      nodeUrl: process.env.NEXT_PUBLIC_RPC_URL,
     });
   }, []);
 
